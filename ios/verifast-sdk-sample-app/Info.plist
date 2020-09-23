@@ -58,5 +58,26 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>
+	We require access to your camera to capture images of your identity document, and selfie to extract information such as your name, date of birth and facial image for the purpose of verifying your identity and matching your records to your account.
+	</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>
+	We require access to capture your location in order to record your current location to prevent fraud and for auditability purposes whilst capturing your identity.
+	</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>
+We require access to your Photo Library in order to upload selected images to extract information such as your name, date of birth and facial image for the purpose of verifying your identity.
+	</string>
+	<key>NFCReaderUsageDescription</key>
+	<string>
+	We require NFC access to read the embedded chip of your identity document to extract information such as your name, date of birth and facial image for the purpose of verifying your identity.
+	</string>
+	<key>com.apple.developer.nfc.readersession.iso7816.select-identifiers</key>
+	<array>
+		<string>A0000002471001</string>
+		<string>00000000000000</string>
+	</array>
 </dict>
 </plist>
