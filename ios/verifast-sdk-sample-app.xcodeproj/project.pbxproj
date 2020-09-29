@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,7 +15,7 @@
 		009C2DCA251B655C001487B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 009C2DC8251B655C001487B6 /* LaunchScreen.storyboard */; };
 		009C2DD2251B65D9001487B6 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 009C2DD1251B65D9001487B6 /* README.md */; };
 		009C2DD4251B6DF1001487B6 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 009C2DD3251B6DF1001487B6 /* Podfile */; };
-		45D73E6B06E8F9E3290C466F /* Pods_verifast_sdk_sample_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D7F682F5D9245CB38E7E3EF /* Pods_verifast_sdk_sample_app.framework */; };
+		18182808AB5339D2AC5641DB /* Pods_verifast_sdk_sample_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56847A34E47766E8EF5DEDDA /* Pods_verifast_sdk_sample_app.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,10 +28,10 @@
 		009C2DC9251B655C001487B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		009C2DCB251B655C001487B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		009C2DD1251B65D9001487B6 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		009C2DD3251B6DF1001487B6 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
-		4F14E509DF1941211E2F8DCB /* Pods-verifast-sdk-sample-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-verifast-sdk-sample-app.release.xcconfig"; path = "Target Support Files/Pods-verifast-sdk-sample-app/Pods-verifast-sdk-sample-app.release.xcconfig"; sourceTree = "<group>"; };
-		88C375AD57DC4C6D91E2DB4D /* Pods-verifast-sdk-sample-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-verifast-sdk-sample-app.debug.xcconfig"; path = "Target Support Files/Pods-verifast-sdk-sample-app/Pods-verifast-sdk-sample-app.debug.xcconfig"; sourceTree = "<group>"; };
-		8D7F682F5D9245CB38E7E3EF /* Pods_verifast_sdk_sample_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_verifast_sdk_sample_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		009C2DD3251B6DF1001487B6 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		087E9FFED5D8A0835A445C87 /* Pods-verifast-sdk-sample-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-verifast-sdk-sample-app.debug.xcconfig"; path = "Target Support Files/Pods-verifast-sdk-sample-app/Pods-verifast-sdk-sample-app.debug.xcconfig"; sourceTree = "<group>"; };
+		56847A34E47766E8EF5DEDDA /* Pods_verifast_sdk_sample_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_verifast_sdk_sample_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4C3679B9C19215C184DAD46 /* Pods-verifast-sdk-sample-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-verifast-sdk-sample-app.release.xcconfig"; path = "Target Support Files/Pods-verifast-sdk-sample-app/Pods-verifast-sdk-sample-app.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,7 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45D73E6B06E8F9E3290C466F /* Pods_verifast_sdk_sample_app.framework in Frameworks */,
+				18182808AB5339D2AC5641DB /* Pods_verifast_sdk_sample_app.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,7 +54,7 @@
 				009C2DBC251B655A001487B6 /* verifast-sdk-sample-app */,
 				009C2DBB251B655A001487B6 /* Products */,
 				D7009F310EB87AC32AF2EE08 /* Pods */,
-				FB649A1FEB0FA2EF48CC8C73 /* Frameworks */,
+				7056CDD465FE42BD7C67B1B0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,22 +80,21 @@
 			path = "verifast-sdk-sample-app";
 			sourceTree = "<group>";
 		};
+		7056CDD465FE42BD7C67B1B0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				56847A34E47766E8EF5DEDDA /* Pods_verifast_sdk_sample_app.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D7009F310EB87AC32AF2EE08 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				88C375AD57DC4C6D91E2DB4D /* Pods-verifast-sdk-sample-app.debug.xcconfig */,
-				4F14E509DF1941211E2F8DCB /* Pods-verifast-sdk-sample-app.release.xcconfig */,
+				087E9FFED5D8A0835A445C87 /* Pods-verifast-sdk-sample-app.debug.xcconfig */,
+				D4C3679B9C19215C184DAD46 /* Pods-verifast-sdk-sample-app.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		FB649A1FEB0FA2EF48CC8C73 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				8D7F682F5D9245CB38E7E3EF /* Pods_verifast_sdk_sample_app.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -105,12 +104,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 009C2DCE251B655C001487B6 /* Build configuration list for PBXNativeTarget "verifast-sdk-sample-app" */;
 			buildPhases = (
-				746E019EDC0D0D7228526298 /* [CP] Check Pods Manifest.lock */,
+				00FCC9A9C726091C54EFA579 /* [CP] Check Pods Manifest.lock */,
 				009C2DB6251B655A001487B6 /* Sources */,
 				009C2DB7251B655A001487B6 /* Frameworks */,
 				009C2DB8251B655A001487B6 /* Resources */,
-				C8E5876B3FF5179D8EFFD0F9 /* [CP] Embed Pods Frameworks */,
-				26C3D4CBFB29A0BD5523F9E6 /* [CP] Copy Pods Resources */,
+				843A2097730057FBE969AF57 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -170,24 +168,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		26C3D4CBFB29A0BD5523F9E6 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-verifast-sdk-sample-app/Pods-verifast-sdk-sample-app-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-verifast-sdk-sample-app/Pods-verifast-sdk-sample-app-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-verifast-sdk-sample-app/Pods-verifast-sdk-sample-app-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		746E019EDC0D0D7228526298 /* [CP] Check Pods Manifest.lock */ = {
+		00FCC9A9C726091C54EFA579 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -209,7 +190,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C8E5876B3FF5179D8EFFD0F9 /* [CP] Embed Pods Frameworks */ = {
+		843A2097730057FBE969AF57 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -377,11 +358,12 @@
 		};
 		009C2DCF251B655C001487B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 88C375AD57DC4C6D91E2DB4D /* Pods-verifast-sdk-sample-app.debug.xcconfig */;
+			baseConfigurationReference = 087E9FFED5D8A0835A445C87 /* Pods-verifast-sdk-sample-app.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9886XZVSMQ;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "verifast-sdk-sample-app/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -397,11 +379,12 @@
 		};
 		009C2DD0251B655C001487B6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4F14E509DF1941211E2F8DCB /* Pods-verifast-sdk-sample-app.release.xcconfig */;
+			baseConfigurationReference = D4C3679B9C19215C184DAD46 /* Pods-verifast-sdk-sample-app.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9886XZVSMQ;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "verifast-sdk-sample-app/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
