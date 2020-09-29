@@ -89,29 +89,6 @@ We require NFC access to read the embedded chip of your identity document to ext
 </array>
 ```
 
-### Firebase Configuration
-
-In order to detect a person's face, we rely on the `Firebase MLVision` library. As such, you have to include firebase in your project. There are a few setup steps in order to include firebase in your project:
-
-1. Head to [https://console.firebase.google.com](https://console.firebase.google.com) and create a new project. 
-2. Head to [https://firebase.google.com/docs/ios/setup](https://firebase.google.com/docs/ios/setup) and follow steps 2-4 to integrate firebase into your project. 
-
-This includes downloading your `GoogleService-Info.plist` file and adding it to your XCode project. Further, you need to initialise Firebase in your `AppDelegate.swift` as follows:
-
-```
-import UIKit
-import Firebase
-
-@UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        FirebaseApp.configure()
-        return true
-    }
-}
-```
-
 ### Setting Up your EYN API Key
 
 Setting up your api key is easy. You simple call EYN's singleton with the `withLicense` function and set the following keys:
@@ -136,7 +113,13 @@ You simple call EYN's singleton with the `execute` function as shown below in yo
 Eyn.shared.execute(resultHandler: { result in
     print(result.name)
     print(result.surname)
-    print(result.date_of_birth)
+    print(result.birth_date)
+    print(result.sex)
+    print(result.country)
+    print(result.nationality)
+    print(result.document_type)
+    print(result.document_number)
+    print(result.expiry_date)
 })
 ```
 
@@ -153,8 +136,8 @@ class ViewController: UIViewController {
         
         var ready: Bool = false
         Eyn.shared.withLicense(
-            fromApiKey: "api_key_676db5da-71f0-471f-8e3b-f4fae0f823d8",
-            fromSiteId: "site_id_ba098139-1d3c-4722-b534-93c3f5734af1",
+            fromApiKey: "api_key_1555b89d-28ee-4021-ae2b-49eac69f4856",
+            fromSiteId: "site_id_6135adaf-0671-4ecd-b040-b5a2b089d12b",
             fromEnrolee: "robin@eyn.vision",
             completionHandler: {
                 ready = true
@@ -163,11 +146,55 @@ class ViewController: UIViewController {
         while(!ready) {
         }
         
-        Eyn.shared.execute(resultHandler: { result in
+        _ = Eyn.shared.execute(resultHandler: { result in
             print(result.name)
             print(result.surname)
-            print(result.date_of_birth)
+            print(result.birth_date)
+            print(result.sex)
+            print(result.country)
+            print(result.nationality)
+            print(result.document_type)
+            print(result.document_number)
+            print(result.expiry_date)
         })
     }
 }
+```
+
+## Customisation of the SDK
+
+In order to adapt EYN's VeriFast-SDK to your needs, you can customise our SDK as follows:
+
+### Font
+
+EYN's VeriFast-SDK uses three types of fonts: bold, regular and thin font. You can choose one font for each type or different fonts for each type. Currently the sizes in the SDK are fixed and will be customisable in future releases. You can select any font name or load your custom font as follows:
+
+```
+_ = Eyn.shared.withCustomInterface(
+    fromFont: [UIFont(name: "Courier", size: 19.0)!,    // bold font
+               UIFont(name: "Courier", size: 19.0)!,    // regular font
+               UIFont(name: "Courier", size: 19.0)!],   // thin font
+    fromColor: nil)
+```
+
+### Colour 
+
+EYN's VeriFast-SDK colouring scheme is customisable and you can choose any colour as follows:
+
+```
+_ = Eyn.shared.withCustomInterface(
+    fromFont: nil,
+    fromColor: [UIColor.blue])
+```
+
+### Full Example
+
+You can combine both customisations as follows:
+
+```
+_ = Eyn.shared.withCustomInterface(
+    fromFont: [UIFont(name: "Courier", size: 19.0)!,
+               UIFont(name: "Courier", size: 19.0)!,
+               UIFont(name: "Courier", size: 19.0)!],
+    fromColor: [UIColor.blue])
 ```
