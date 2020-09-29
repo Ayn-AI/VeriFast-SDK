@@ -2,6 +2,14 @@
 VeriFast-SDK-iOS
 ==
 
+## Table of Contents
+1. [Get EYN's VeriFast-SDK-iOS](#get_eyns_sdk)
+2. [Getting Started](#getting_started)
+3. [Customisation of the SDK](#customisation)
+4. [Sample Implementation](#sample_implementation)
+
+ 
+ <a name="get_eyns_sdk"></a>
 ## Get EYN's VeriFast-SDK-iOS
 
 EYN's VeriFast-SDK for iOS is available via [https://cocoapods.org/](https://cocoapods.org/). Follow the following steps to install `Cocoapods` and install EYN's VeriFast-SDK-iOS:
@@ -34,6 +42,7 @@ pod install
 
 Once this is done, you can open the `<Your XCode Project name>.xcworkspace` project file and follow below steps to set up EYN's VeriFast-SDK-iOS.
 
+<a name="getting_started"></a>
 ## Getting Started
 There are a couple of configuration steps in order to integrate EYN's VeriFast-SDK-iOS:
 
@@ -123,6 +132,7 @@ Eyn.shared.execute(resultHandler: { result in
 })
 ```
 
+<a name="customisation"></a>
 ## Customisation of the SDK
 
 In order to adapt EYN's VeriFast-SDK to your needs, you can customise our SDK as follows:
@@ -149,7 +159,8 @@ _ = Eyn.shared.withCustomInterface(
     fromColor: [UIColor(red: 5.0/255.0, green: 41.0/255.0, blue: 75.0/255.0, alpha: 1.0)])
 ```
 
-### Full Example
+<a name="sample_implementation"></a>
+## Sample Implementation
 
 A full example integration is shown below. 
 
