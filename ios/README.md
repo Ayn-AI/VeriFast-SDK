@@ -123,44 +123,6 @@ Eyn.shared.execute(resultHandler: { result in
 })
 ```
 
-A full example integration is shown below. 
-
-```
-import UIKit
-import Eyn
-
-class ViewController: UIViewController {
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        var ready: Bool = false
-        Eyn.shared.withLicense(
-            fromApiKey: "api_key_1555b89d-28ee-4021-ae2b-49eac69f4856",
-            fromSiteId: "site_id_6135adaf-0671-4ecd-b040-b5a2b089d12b",
-            fromEnrolee: "dev@eyn.vision",
-            completionHandler: {
-                ready = true
-        })
-        
-        while(!ready) {
-        }
-        
-        _ = Eyn.shared.execute(resultHandler: { result in
-            print(result.name)
-            print(result.surname)
-            print(result.birth_date)
-            print(result.sex)
-            print(result.country)
-            print(result.nationality)
-            print(result.document_type)
-            print(result.document_number)
-            print(result.expiry_date)
-        })
-    }
-}
-```
-
 ## Customisation of the SDK
 
 In order to adapt EYN's VeriFast-SDK to your needs, you can customise our SDK as follows:
@@ -189,12 +151,49 @@ _ = Eyn.shared.withCustomInterface(
 
 ### Full Example
 
-You can combine both customisations as follows:
+A full example integration is shown below. 
 
 ```
-_ = Eyn.shared.withCustomInterface(
-    fromFont: [UIFont(name: "Courier", size: 19.0)!,
-               UIFont(name: "Courier", size: 19.0)!,
-               UIFont(name: "Courier", size: 19.0)!],
-    fromColor: [UIColor.blue])
+import UIKit
+import Eyn
+
+class ViewController: UIViewController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        var ready: Bool = false
+        // don't forget to change these example license keys with your api key
+        Eyn.shared.withLicense(
+            fromApiKey: "api_key_1555b89d-28ee-4021-ae2b-49eac69f4856",
+            fromSiteId: "site_id_6135adaf-0671-4ecd-b040-b5a2b089d12b",
+            fromEnrolee: "dev@eyn.vision",
+            completionHandler: {
+                ready = true
+        })
+        
+        while(!ready) {
+        }
+        
+        // this step is optional for you to customise your sdk
+        _ = Eyn.shared.withCustomInterface(
+            fromFont: [UIFont(name: "Courier", size: 19.0)!,
+                       UIFont(name: "Courier", size: 19.0)!,
+                       UIFont(name: "Courier", size: 19.0)!],
+            fromColor: [UIColor.blue])
+        
+        // this will load and present EYN's sdk to the user 
+        _ = Eyn.shared.execute(resultHandler: { result in
+            print(result.name)
+            print(result.surname)
+            print(result.birth_date)
+            print(result.sex)
+            print(result.country)
+            print(result.nationality)
+            print(result.document_type)
+            print(result.document_number)
+            print(result.expiry_date)
+        })
+    }
+}
 ```

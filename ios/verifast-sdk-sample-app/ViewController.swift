@@ -27,10 +27,10 @@ class ViewController: UIViewController {
         }
         
         _ = Eyn.shared.withCustomInterface(
-        fromFont: [UIFont(name: "Courier", size: 19.0)!,
-                   UIFont(name: "Courier", size: 19.0)!,
-                   UIFont(name: "Courier", size: 19.0)!],
-        fromColor: [UIColor.blue])
+        fromFont: [UIFont(name: "Helvetica", size: 19.0)!,
+                   UIFont(name: "Helvetica", size: 19.0)!,
+                   UIFont(name: "Helvetica", size: 19.0)!],
+        fromColor: [UIColor(red: 5.0/255.0, green: 41.0/255.0, blue: 75.0/255.0, alpha: 1.0)])
         
         _ = Eyn.shared.execute(resultHandler: { result in
             print(result.name)
