@@ -133,9 +133,9 @@ EYN's VeriFast-SDK uses three types of fonts: bold, regular and thin font. You c
 
 ```
 _ = Eyn.shared.withCustomInterface(
-    fromFont: [UIFont(name: "Courier", size: 19.0)!,    // bold font
-               UIFont(name: "Courier", size: 19.0)!,    // regular font
-               UIFont(name: "Courier", size: 19.0)!],   // thin font
+    fromFont: [UIFont(name: "Helvetica", size: 19.0)!,    // bold font
+               UIFont(name: "Helvetica", size: 19.0)!,    // regular font
+               UIFont(name: "Helvetica", size: 19.0)!],   // thin font
     fromColor: nil)
 ```
 
@@ -146,7 +146,7 @@ EYN's VeriFast-SDK colouring scheme is customisable and you can choose any colou
 ```
 _ = Eyn.shared.withCustomInterface(
     fromFont: nil,
-    fromColor: [UIColor.blue])
+    fromColor: [UIColor(red: 5.0/255.0, green: 41.0/255.0, blue: 75.0/255.0, alpha: 1.0)])
 ```
 
 ### Full Example
@@ -177,10 +177,10 @@ class ViewController: UIViewController {
         
         // this step is optional for you to customise your sdk
         _ = Eyn.shared.withCustomInterface(
-            fromFont: [UIFont(name: "Courier", size: 19.0)!,
-                       UIFont(name: "Courier", size: 19.0)!,
-                       UIFont(name: "Courier", size: 19.0)!],
-            fromColor: [UIColor.blue])
+            fromFont: [UIFont(name: "Helvetica", size: 19.0)!,
+                       UIFont(name: "Helvetica", size: 19.0)!,
+                       UIFont(name: "Helvetica", size: 19.0)!],
+            fromColor: [UIColor(red: 5.0/255.0, green: 41.0/255.0, blue: 75.0/255.0, alpha: 1.0)])
         
         // this will load and present EYN's sdk to the user 
         _ = Eyn.shared.execute(resultHandler: { result in
