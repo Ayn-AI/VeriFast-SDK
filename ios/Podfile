@@ -7,6 +7,6 @@ target 'verifast-sdk-sample-app' do
   use_frameworks!
 
   # Pods for verifast-sdk-sample-app
-  pod 'eyn', '1.0.4'
+  pod 'eyn', '1.0.5'
 
 end
