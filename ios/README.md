@@ -382,7 +382,7 @@ The steps can be configured into EYN's VeriFast-SDK with the function `withSteps
 Eyn.shared.withSteps(withSteps: [.document, .chip, .face])
 ```
 
-The following combinations of steps are configurable (since chip and face reading required the document step as a pre-condition): 
+The following combinations of steps are configurable (since chip and face reading require the document step as a pre-condition): 
 
  *  `[.document]`
  *  `[.document, .face]`
