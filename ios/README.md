@@ -50,7 +50,7 @@ There are a couple of configuration steps in order to integrate EYN's VeriFast-S
 ### App permissions
 The sdk access the camera, near field communication, photo library and location. Therefore, the following permissions need to be set in your `Info.plist` file:
 
-```
+```xml
 <key>NSCameraUsageDescription</key>
 <string>
 We require access to your camera to capture images of your identity document, and selfie to extract information such as your name, date of birth and facial image for the purpose of verifying your identity and matching your records to your account.
@@ -73,7 +73,7 @@ EYN's VeriFast-SDK-iOS reads information from the identity documents embedded ch
 
 2. Add a `*.entitlements` file, where `*` is your application name to your app and include in your XCode project to enable the `NFC Capability`. The file should have the following content:
 
-```
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -87,7 +87,7 @@ EYN's VeriFast-SDK-iOS reads information from the identity documents embedded ch
 ```
 
 3. Add the following permissions in your `Info.plist` file:
-```
+```xml
 <key>NFCReaderUsageDescription</key>
 <string>
 We require NFC access to read the embedded chip of your identity document to extract information such as your name, date of birth and facial image for the purpose of verifying your identity.
@@ -103,7 +103,7 @@ We require NFC access to read the embedded chip of your identity document to ext
 
 Setting up your api key is easy. You simple call EYN's singleton with the `withLicense` function and set the following keys:
 
-```
+```swift
 Eyn.shared.withLicense(
     fromApiKey: "api_key_1555b89d-28ee-4021-ae2b-49eac69f4856",
     fromSiteId: "site_id_6135adaf-0671-4ecd-b040-b5a2b089d12b",
@@ -119,7 +119,7 @@ Don't have an api key yet? Please contact us <a href="mailto:contact@eyn.vision"
 
 You simple call EYN's singleton with the `execute` function as shown below in your `ViewController`:
 
-```
+```swift
 Eyn.shared.execute(
     onSuccess: { result in
         print(result.name)
@@ -148,7 +148,7 @@ Check out our documentation at [https://api.eyn.vision](https://api.eyn.vision) 
 
 An example response of identity checks that EYN is performing can be seen below: 
 
-```
+```json
 { 
 "face_checks" : {
     "face_matched": true,
@@ -198,7 +198,7 @@ Each function of the `Eyn` singleton is a `throwing` function, which on miss-con
 
 There are the following implementation error types:
 
-```
+```swift
 public enum EynImplementationErrorType: Error {
     case licenseError
     case documentTypeError
@@ -211,7 +211,7 @@ public enum EynImplementationErrorType: Error {
 
 In order to handle any `EynImplementationError` it is recommended that you add a `do try catch()` block around all functions of `Eyn` singleton and handle the errors as follows:
 
-```
+```swift
 do {
     try Eyn.shared.execute(
         onSuccess: { _ in _ },
@@ -242,7 +242,7 @@ do {
 
 There are the following runtime error types:
 
-```
+```swift
 public enum EynRuntimeErrorType: Error {
     case cameraPermissions
     case locationPermissions
@@ -254,7 +254,7 @@ public enum EynRuntimeErrorType: Error {
 
 In order to handle any `EynRuntimeError` it is recommended that you implement the `onError` callback handler as follows:
 
-```
+```swift
 try Eyn.shared.execute(
     onSuccess: { _ in _ },
     onError: { error in
@@ -286,7 +286,7 @@ In order to adapt EYN's VeriFast-SDK to your needs, you can customise our SDK as
 
 EYN's VeriFast-SDK uses three types of fonts: bold, regular and thin font. You can choose one font for each type or different fonts for each type. Currently the sizes in the SDK are fixed and will be customisable in future releases. You can select any font name or load your custom font as follows:
 
-```
+```swift
 _ = Eyn.shared.withCustomInterface(
     fromFont: [UIFont(name: "Helvetica", size: 19.0)!,    // bold font
                UIFont(name: "Helvetica", size: 19.0)!,    // regular font
@@ -298,7 +298,7 @@ _ = Eyn.shared.withCustomInterface(
 
 EYN's VeriFast-SDK colouring scheme is customisable and you can choose any colour as follows:
 
-```
+```swift
 _ = Eyn.shared.withCustomInterface(
     fromFont: nil,
     fromColor: [UIColor(red: 5.0/255.0, green: 41.0/255.0, blue: 75.0/255.0, alpha: 1.0)])
@@ -308,7 +308,7 @@ _ = Eyn.shared.withCustomInterface(
 
 EYN's VeriFast-SDK allows for document pre-selection. You can choose any of the following document types: 
 
-```
+```swift
 public enum EynDocument: String {
     case resident_permit = "resident_permit"
     case visa = "visa"
@@ -319,7 +319,7 @@ public enum EynDocument: String {
 
 The document pre-selection can be configured as an additional parameter in the `execute()` function as shown below:
 
-```
+```swift
 Eyn.shared.execute(
     onSuccess: { result in
         print(result.name)
@@ -344,7 +344,7 @@ If the parameter `fromDocument` is given a `nil` value, then EYN's VeriFast-SDK 
 
 EYN's VeriFast-SDK displays animations in order to help non-tech savy users to capture their identity documents. By default, these animations are shown. In order to display or block these animations, you can pass a parameter `withAnimations: <Bool>`  to the `execute()` function as shown below:
 
-```
+```swift
 Eyn.shared.execute(
     onSuccess: { result in
         print(result.name)
