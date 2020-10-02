@@ -20,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		0041E3578B568EF6000F0196 /* Pods_verifast_sdk_sample_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_verifast_sdk_sample_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0088E96C2527221800612F6D /* verifast-sdk-sample-app.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = "verifast-sdk-sample-app.entitlements"; sourceTree = "<group>"; };
 		009C2DBA251B655A001487B6 /* verifast-sdk-sample-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "verifast-sdk-sample-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		009C2DBD251B655A001487B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		009C2DBF251B655A001487B6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +70,7 @@
 		009C2DBC251B655A001487B6 /* verifast-sdk-sample-app */ = {
 			isa = PBXGroup;
 			children = (
+				0088E96C2527221800612F6D /* verifast-sdk-sample-app.entitlements */,
 				009C2DBD251B655A001487B6 /* AppDelegate.swift */,
 				009C2DBF251B655A001487B6 /* SceneDelegate.swift */,
 				009C2DC1251B655A001487B6 /* ViewController.swift */,
@@ -361,6 +363,7 @@
 			baseConfigurationReference = 365857A5FE711FA3115191B6 /* Pods-verifast-sdk-sample-app.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "verifast-sdk-sample-app/verifast-sdk-sample-app.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9886XZVSMQ;
 				ENABLE_BITCODE = NO;
@@ -382,6 +385,7 @@
 			baseConfigurationReference = 4819F17D082A44BBE824DE7B /* Pods-verifast-sdk-sample-app.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "verifast-sdk-sample-app/verifast-sdk-sample-app.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9886XZVSMQ;
 				ENABLE_BITCODE = NO;
